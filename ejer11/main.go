@@ -55,7 +55,36 @@ func HumanoRespirando(hu humano) {
 	fmt.Printf("Soy un/a %s, y ya estoy respirando \n", hu.sexo())
 }
 
+
+
+/*  GENERO ANIMAL   */
+
+type perro struct {
+	respirando bool
+	comiendo bool
+	carnivoro bool
+}
+
+func (p *perro ) respirar()  { p.respirando = true }
+func (p *perro ) comer()  { p.comiendo = true }
+func (p *perro ) EsCarnivoro() bool  { return p.carnivoro }
+
+func AnimalesRespirar(an animal)  {
+	an.respirar()
+	fmt.Println("Soy un animal y estoy respirando")
+}
+
+func AnimalesCarnivoros(an animal) int {
+	if an.EsCarnivoro() == true {
+		return 1
+	}
+	return 0
+}
+
+
 func main()  {
+
+fmt.Println("------HUMANOS-----")
 
 Pedro := new(hombre)
 Pedro.esHombre = true
@@ -63,6 +92,25 @@ HumanoRespirando(Pedro)
 
 Maria := new(mujer)
 HumanoRespirando(Maria)
+
+
+fmt.Println("------ANIMALES-----")
+
+
+totalCarnivoros := 0
+
+Dogo := new(perro)
+Dogo.carnivoro = true
+AnimalesRespirar(Dogo)
+totalCarnivoros =+ AnimalesCarnivoros(Dogo)
+
+
+Pitbull := new(perro)
+Pitbull.carnivoro = true
+AnimalesRespirar(Pitbull)
+totalCarnivoros += AnimalesCarnivoros(Pitbull)
+
+fmt.Printf("Total Carnivoros %d", totalCarnivoros)
 
 
 }
