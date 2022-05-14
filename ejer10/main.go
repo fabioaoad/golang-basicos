@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	us "goland-basicos/ejer10/user"
+	us "golang-basicos/ejer10/user"
 	"time"
 )
 
