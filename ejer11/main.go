@@ -2,11 +2,16 @@ package main
 
 import "fmt"
 
+type serVivo interface {
+	estaVivo() bool
+}
+
 type humano interface {
 	respirar()
 	pensar()
 	comer()
 	sexo() string
+	estaVivo() bool
 }
 
 
@@ -14,6 +19,7 @@ type animal interface {
 	respirar()
 	comer()
 	EsCarnivoro() bool
+	estaVivo() bool
 }
 
 type vegetal interface {
@@ -31,6 +37,7 @@ type hombre struct {
 	pensando bool
 	comiendo bool
 	esHombre bool
+	vivo bool
 }
 
 type mujer struct {
@@ -47,6 +54,7 @@ func (h *hombre) sexo() string {
 		return "Mujer"
 	}
 }
+func (h *hombre) estaVivo() bool { return h.vivo}
 
 
 
@@ -63,11 +71,13 @@ type perro struct {
 	respirando bool
 	comiendo bool
 	carnivoro bool
+	vivo bool
 }
 
 func (p *perro ) respirar()  { p.respirando = true }
 func (p *perro ) comer()  { p.comiendo = true }
 func (p *perro ) EsCarnivoro() bool  { return p.carnivoro }
+func (p *perro ) estaVivo() bool  { return p.vivo }
 
 func AnimalesRespirar(an animal)  {
 	an.respirar()
@@ -79,6 +89,12 @@ func AnimalesCarnivoros(an animal) int {
 		return 1
 	}
 	return 0
+}
+
+/*  SER VIVO  */
+
+func estoyVivo(v serVivo) bool {
+	return v.estaVivo()
 }
 
 
@@ -97,10 +113,12 @@ HumanoRespirando(Maria)
 fmt.Println("------ANIMALES-----")
 
 
+
 totalCarnivoros := 0
 
 Dogo := new(perro)
 Dogo.carnivoro = true
+Dogo.vivo = true
 AnimalesRespirar(Dogo)
 totalCarnivoros =+ AnimalesCarnivoros(Dogo)
 
@@ -110,7 +128,8 @@ Pitbull.carnivoro = true
 AnimalesRespirar(Pitbull)
 totalCarnivoros += AnimalesCarnivoros(Pitbull)
 
-fmt.Printf("Total Carnivoros %d", totalCarnivoros)
+fmt.Printf("Total Carnivoros %d \n", totalCarnivoros)
 
+fmt.Printf("Estoy vivo = %t", estoyVivo(Dogo))
 
 }
