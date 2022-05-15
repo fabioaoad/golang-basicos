@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23abd7d0-ff20-4f9f-aa9b-2ac48c08873b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ejer11/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/ejer11/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejer 12/archivo.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejer 12/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +37,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
