@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23abd7d0-ff20-4f9f-aa9b-2ac48c08873b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ejer17/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ejer17/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ejer18/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Go File" />
         <option value="HTML File" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
